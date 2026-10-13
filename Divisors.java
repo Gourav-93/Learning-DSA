@@ -26,6 +26,7 @@ Output:
 */
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Divisors {
 
@@ -45,11 +46,15 @@ public class Divisors {
         return res;
     }
 
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
 
-        
+        int n = 8;
 
+        Divisors obj = new Divisors();
+
+        int[] div = obj.divisors(n);
+
+        System.out.println(Arrays.toString(div));
     }
 
 }
