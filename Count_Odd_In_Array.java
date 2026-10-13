@@ -17,7 +17,23 @@ Output: 5
 Explanation: The five odd elements are one 5 and four 1's.
  */
 public class Count_Odd_In_Array {
+    public int countOdd(int[] arr, int n) {
+
+        int odd = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                odd++;
+            }
+        }
+        return odd;
+    }
     public static void main(String[] args) {
+
+        int arr[] = { 1, 2, 3, 4, 5 };
+        int n = arr.length;
+        Count_Odd_In_Array obj = new Count_Odd_In_Array();
+        int res = obj.countOdd(arr, n);
+        System.out.println(res);
 
     }
 }
