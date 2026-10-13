@@ -21,11 +21,26 @@ Explanation: The given array is Not sorted i.e Every element in the array is not
 than or equal to its next values, So the answer is False. Here element 5 is not smaller 
 than or equal to its future elements.
  */
-public class If_The_Array_Is_Sorted 
-{
+public class If_The_Array_Is_Sorted {
+    boolean arraySortedOrNot(int[] arr, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] > arr[j]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 
-    
     public static void main(String[] args) {
-        
+
+        int[] nums = { 1, 2, 2, 4 };
+
+        If_The_Array_Is_Sorted solution = new If_The_Array_Is_Sorted();
+        boolean answer = solution.arraySortedOrNot(nums, nums.length);
+
+        System.out.println(answer);
+
     }
 }
