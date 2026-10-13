@@ -24,11 +24,32 @@ Input: n = 7
 Output:
 [1, 7]
 */
-public class Divisors 
-{
 
-    public static void main(String[] args) {
+import java.util.ArrayList;
+
+public class Divisors {
+
+    public int[] divisors(int n) {
+
+        ArrayList<Integer> list = new ArrayList();
+
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                list.add(i);
+            }
+        }
+        int res[] = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            res[i] = list.get(i);
+        }
+        return res;
+    }
+
+    public static void main(String[] args) 
+    {
+
         
+
     }
 
 }
